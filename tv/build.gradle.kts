@@ -19,11 +19,11 @@ android {
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.github.mytv.android"
+        applicationId = "tv.android"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = "${System.getenv("VERSION_CODE")}".toInt()
-        versionName = "1.1.1.${System.getenv("VERSION_CODE")}"//.${System.getenv("COMMIT_HASH")}"
+        versionCode = 1//"${System.getenv("VERSION_CODE")}".toInt()
+        versionName = "1.0"//"${System.getenv("VERSION_CODE")}.0"//.${System.getenv("COMMIT_HASH")}"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -46,7 +46,8 @@ android {
             }
         }
         debug{
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
@@ -153,8 +154,8 @@ dependencies {
 }
 
 sentry {
-    org.set("mytv-android")
-    projectName.set("mytv")
+    org.set("tv-android")
+    projectName.set("tv")
     authToken.set(getProperty("sentry.auth_token") ?: System.getenv("SENTRY_AUTH_TOKEN"))
     ignoredBuildTypes.set(setOf("debug"))
     autoUploadProguardMapping = false
