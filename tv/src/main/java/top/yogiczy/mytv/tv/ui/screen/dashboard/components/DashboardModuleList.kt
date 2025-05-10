@@ -48,6 +48,14 @@ fun DashboardModuleList(
                 modifier = Modifier
                     .focusRequester(runtime.firstItemFocusRequester)
                     .handleKeyEvents(onLeft = { runtime.scrollToLast() }),
+                imageVector = Icons.Outlined.Settings,
+                title = "设置",
+                onSelected = toSettingsScreen,
+            )
+        }
+
+        item {
+            DashboardModuleItem(
                 imageVector = Icons.Outlined.Tv,
                 title = "直播",
                 onSelected = toLiveScreen,
@@ -70,13 +78,13 @@ fun DashboardModuleList(
             )
         }
 
-        item {
-            DashboardModuleItem(
-                imageVector = Icons.Outlined.Search,
-                title = "搜索",
-                onSelected = toSearchScreen,
-            )
-        }
+        //item {
+        //    DashboardModuleItem(
+        //        imageVector = Icons.Outlined.Search,
+        //        title = "搜索",
+        //        onSelected = toSearchScreen,
+        //   )
+        //}
 
         item {
             DashboardModuleItem(
@@ -88,30 +96,25 @@ fun DashboardModuleList(
 
         item {
             DashboardModuleItem(
+                modifier = Modifier
+                    .focusRequester(runtime.lastItemFocusRequester)
+                    .handleKeyEvents(onRight = { runtime.scrollToFirst() }),
                 imageVector = Icons.Outlined.CloudUpload,
                 title = "推送",
                 onSelected = toPushScreen,
             )
         }
 
-        item {
-            DashboardModuleItem(
-                imageVector = Icons.Outlined.Settings,
-                title = "设置",
-                onSelected = toSettingsScreen,
-            )
-        }
-
-        item {
-            DashboardModuleItem(
-                modifier = Modifier
-                    .focusRequester(runtime.lastItemFocusRequester)
-                    .handleKeyEvents(onRight = { runtime.scrollToFirst() }),
-                imageVector = Icons.Outlined.Info,
-                title = "关于",
-                onSelected = toAboutScreen,
-            )
-        }
+        //item {
+        //    DashboardModuleItem(
+        //         modifier = Modifier
+        //            .focusRequester(runtime.lastItemFocusRequester)
+        //            .handleKeyEvents(onRight = { runtime.scrollToFirst() }),
+        //        imageVector = Icons.Outlined.Info,
+        //        title = "关于",
+        //        onSelected = toAboutScreen,
+        //    )
+        //}
     }
 }
 
@@ -126,4 +129,4 @@ private fun DashboardModuleListPreview() {
         }
         // PreviewWithLayoutGrids { }
     }
-}
+}    

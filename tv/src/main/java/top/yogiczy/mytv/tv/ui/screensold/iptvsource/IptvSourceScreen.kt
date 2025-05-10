@@ -79,7 +79,7 @@ fun IptvSourceScreen(
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = "订阅源",
+                    text = "直播源",
                 )
                 AppScaffoldHeaderBtn(
                     title = "刷新",

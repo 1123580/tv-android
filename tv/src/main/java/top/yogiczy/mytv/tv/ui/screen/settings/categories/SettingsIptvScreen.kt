@@ -35,7 +35,7 @@ fun SettingsIptvScreen(
 ) {
     SettingsCategoryScreen(
         modifier = modifier,
-        header = { Text("设置 / 订阅源") },
+        header = { Text("设置 / 直播源") },
         onBackPressed = onBackPressed,
     ) { firstItemFocusRequester ->
         item {
@@ -135,7 +135,7 @@ fun SettingsIptvScreen(
         item {
             SettingsListItem(
                 headlineContent = "频道图标覆盖",
-                supportingContent = "使用频道图标提供覆盖订阅源中定义的频道图标",
+                supportingContent = "使用频道图标提供覆盖直播源中定义的频道图标",
                 trailingContent = {
                     Switch(settingsViewModel.iptvChannelLogoOverride, null)
                 },
@@ -149,7 +149,7 @@ fun SettingsIptvScreen(
         item {
             SettingsListItem(
                 headlineContent = "PLTV转TVOD",
-                supportingContent = "自动将订阅源链接中的PLTV替换为TVOD以支持回看",
+                supportingContent = "自动将直播源链接中的PLTV替换为TVOD以支持回看",
                 trailingContent = {
                     Switch(settingsViewModel.iptvPLTVToTVOD, null)
                 },
@@ -165,7 +165,7 @@ fun SettingsIptvScreen(
 
             SettingsListItem(
                 headlineContent = "自动添加网页源",
-                supportingContent = "为订阅源中的频道自动添加对应的网页源线路",
+                supportingContent = "为直播源中的频道自动添加对应的网页源线路",
                 trailingContent = { Text(hybridMode.label) },
                 onSelect = toIptvHybridModeScreen,
                 link = true,

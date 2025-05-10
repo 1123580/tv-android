@@ -95,7 +95,7 @@ fun QuickOpBtnList(
                     .focusOnLaunched()
                     .focusRequester(runtime.firstItemFocusRequester)
                     .handleKeyEvents(onLeft = { runtime.scrollToLast()}),
-                title = "订阅源",
+                title = "直播源",
                 imageVector = Icons.Filled.LiveTv,
                 onSelect = onShowIptvSource,
             )
@@ -124,13 +124,13 @@ fun QuickOpBtnList(
             )
         }
         if(videoPlayerIndicatorProvider()){
-            item {
-                QuickOpBtn(
-                    title = "播放控制",
-                    imageVector = Icons.Filled.ControlCamera,
-                    onSelect = onShowVideoPlayerController,
-                )
-            }
+            //item {
+            //    QuickOpBtn(
+            //        title = "播放控制",
+            //        imageVector = Icons.Filled.ControlCamera,
+            //        onSelect = onShowVideoPlayerController,
+            //    )
+            //}
 
             item {
                 QuickOpBtn(
@@ -167,62 +167,65 @@ fun QuickOpBtnList(
             }
 
             if (playerMetadata.videoTracks.isNotEmpty()) {
-                item {
-                    QuickOpBtn(
-                        title = playerMetadataProvider().video?.shortLabel ?: "视轨",
-                        imageVector = Icons.Filled.VideoLibrary,
-                        onSelect = onShowVideoTracks,
-                    )
-                }
+                //item {
+                //    QuickOpBtn(
+                //        title = playerMetadataProvider().video?.shortLabel ?: "视轨",
+                //        imageVector = Icons.Filled.VideoLibrary,
+                //        onSelect = onShowVideoTracks,
+                //    )
+                //}
             }
 
             if (playerMetadata.audioTracks.isNotEmpty()) {
-                item {
-                    QuickOpBtn(
-                        title = playerMetadataProvider().audio?.shortLabel ?: "音轨",
-                        imageVector = Icons.Filled.MusicNote,
-                        onSelect = onShowAudioTracks,
-                    )
-                }
+                //item {
+                //    QuickOpBtn(
+                //        title = playerMetadataProvider().audio?.shortLabel ?: "音轨",
+                //        imageVector = Icons.Filled.MusicNote,
+                //        onSelect = onShowAudioTracks,
+                //    )
+                //}
             }
 
             if (playerMetadata.subtitleTracks.isNotEmpty()) {
-                item {
-                    QuickOpBtn(
-                        title = playerMetadataProvider().subtitle?.shortLabel ?: "字幕",
-                        imageVector = Icons.Filled.Subtitles,
-                        onSelect = onShowSubtitleTracks,
-                    )
-                }
+                //item {
+                //    QuickOpBtn(
+                //        title = playerMetadataProvider().subtitle?.shortLabel ?: "字幕",
+                //        imageVector = Icons.Filled.Subtitles,
+                //        onSelect = onShowSubtitleTracks,
+                //    )
+                //}
             }
         }
 
-        item {
-            QuickOpBtn(
-                title = "清除缓存",
-                imageVector = Icons.Filled.ClearAll,
-                onSelect = onClearCache,
-            )
-        }
+        //item {
+        //    QuickOpBtn(
+        //        title = "清除缓存",
+        //        imageVector = Icons.Filled.ClearAll,
+        //        onSelect = onClearCache,
+        //    )
+        //}
 
         item{
             QuickOpBtn(
+                modifier = Modifier
+                    .focusRequester(runtime.lastItemFocusRequester)
+                    .handleKeyEvents(onRight = { runtime.scrollToFirst() }),
                 title = "主页",
                 imageVector = Icons.Filled.Home,
                 onSelect = onShowDashboardScreen,
             )
         }
 
-        item {
-            QuickOpBtn(
-                modifier = Modifier
-                    .focusRequester(runtime.lastItemFocusRequester)
-                    .handleKeyEvents(onRight = { runtime.scrollToFirst() }),
-                title = "设置",
-                imageVector = Icons.Filled.Settings,
-                onSelect = onShowMoreSettings,
-            )
-        }
+        //item {
+        //    QuickOpBtn(
+        //        modifier = Modifier
+        //            .focusRequester(runtime.lastItemFocusRequester)
+        //            .handleKeyEvents(onRight = { runtime.scrollToFirst() }),
+        //        title = "设置",
+        //        imageVector = Icons.Filled.Settings,
+        //        onSelect = onShowMoreSettings,
+        //    )
+        //}
     }
 }
 

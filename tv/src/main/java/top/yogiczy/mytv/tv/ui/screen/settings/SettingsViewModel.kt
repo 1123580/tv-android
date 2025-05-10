@@ -124,13 +124,9 @@ class SettingsViewModel : ViewModel() {
             afterSetWhenCloudSyncAutoPull()
         }
 
-    private var _iptvSourceList by mutableStateOf(Constants.IPTV_SOURCE_LIST)
+    private var _iptvSourceList by mutableStateOf(IptvSourceList())
     var iptvSourceList: IptvSourceList
-        get() = if (_iptvSourceList.isEmpty()) {
-            Constants.IPTV_SOURCE_LIST
-        } else {
-            _iptvSourceList
-        }
+        get() = _iptvSourceList
         set(value) {
             _iptvSourceList = value
             Configs.iptvSourceList = value

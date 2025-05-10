@@ -21,28 +21,24 @@ object Constants {
     const val APP_REPO = "https://github.com/mytv-android/mytv-android"
 
     /**
-     * 交流群 telegram
+     * 交流群
      */
     const val GROUP_TELEGRAM = "https://t.me/mytv_android_channel"
 
     /**
-     * 订阅源
+     * 直播源
      */
     val IPTV_SOURCE_LIST = IptvSourceList(
         listOf(
             IptvSource(
-                name = "默认订阅源 iptv-api",
-                url = "https://gitee.com/mytv-android/iptv-api/raw/master/output/result.m3u",
-            ),
-            IptvSource(
-                name = "WebView订阅源",
-                url = "https://gitee.com/mytv-android/iptv-api/raw/master/output/webview.m3u",
+                name = "",
+                url = "",
             )
         )
     )
 
     /**
-     * 订阅源缓存时间（毫秒）
+     * 直播源缓存时间（毫秒）
      */
     const val IPTV_SOURCE_CACHE_TIME = 1000 * 60 * 60L // 24小时
 
@@ -52,8 +48,8 @@ object Constants {
     val EPG_SOURCE_LIST = EpgSourceList(
         listOf(
             EpgSource(
-                name = "默认节目单 综合",
-                url = "https://gitee.com/mytv-android/myepg/raw/master/output/epg.gz",
+                name = "",
+                url = "",
             ),
         )
     )
@@ -78,7 +74,7 @@ object Constants {
      * {name|uppercase} 转成大写
      *
      */
-    const val CHANNEL_LOGO_PROVIDER = "https://gitee.com/mytv-android/myTVlogo/raw/main/img/{name|uppercase}.png"
+    const val CHANNEL_LOGO_PROVIDER = ""
 
     /**
      * GitHub加速代理地址
@@ -89,9 +85,9 @@ object Constants {
      * Git最新版本信息
      */
     val GIT_RELEASE_LATEST_URL = mapOf(
-        "stable" to "https://gitee.com/api/v5/repos/mytv-android/mytvstable/releases/latest",
-        "beta" to "https://gitee.com/api/v5/repos/mytv-android/mytvbeta/releases/latest",
-        "dev" to "https://gitee.com/api/v5/repos/mytv-android/mytvdev/releases/latest",
+        "stable" to "",
+        "beta" to "",
+        "dev" to "",
     )
 
     /**

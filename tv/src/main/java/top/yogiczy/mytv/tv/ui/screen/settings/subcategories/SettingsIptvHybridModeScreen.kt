@@ -32,7 +32,7 @@ fun SettingsIptvHybridModeScreen(
 
     AppScreen(
         modifier = modifier.padding(top = 10.dp),
-        header = { Text("设置 / 订阅源 / 自动添加网页源") },
+        header = { Text("设置 / 直播源 / 自动添加网页源") },
         canBack = true,
         onBackPressed = onBackPressed,
     ) {
@@ -50,8 +50,8 @@ fun SettingsIptvHybridModeScreen(
                         Text(
                             when (mode) {
                                 Configs.IptvHybridMode.DISABLE -> "禁用自动添加网页源"
-                                Configs.IptvHybridMode.IPTV_FIRST -> "将自动添加的网页源线路排在订阅源的后面"
-                                Configs.IptvHybridMode.HYBRID_FIRST -> "将自动添加的网页源线路排在订阅源的前面"
+                                Configs.IptvHybridMode.IPTV_FIRST -> "将自动添加的网页源线路排在直播源的后面"
+                                Configs.IptvHybridMode.HYBRID_FIRST -> "将自动添加的网页源线路排在直播源的前面"
                             }
                         )
                     },

@@ -76,7 +76,7 @@ fun AboutScreen(
                 var visible by remember { mutableStateOf(false) }
                 ListItem(
                     modifier = Modifier.handleKeyEvents(onSelect = { visible = true }),
-                    headlineContent = { Text("本项目代码仓库") },
+                    headlineContent = { Text("代码仓库") },
                     trailingContent = {
                         Row(
                             horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -108,7 +108,7 @@ fun AboutScreen(
 
                 ListItem(
                     modifier = Modifier.handleKeyEvents(onSelect = { visible = true }),
-                    headlineContent = { Text("讨论交流 Telegram") },
+                    headlineContent = { Text("讨论交流") },
                     trailingContent = {
                         Row(
                             horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -175,6 +175,7 @@ fun AboutScreen(
                     text = Globals.deviceId,
                 )
             }
+            /*
             item {
                 var visible by remember { mutableStateOf(false) }
                 ListItem(
@@ -238,7 +239,7 @@ fun AboutScreen(
                     )
                 }
             }
-
+            */
             item {
                 ListItem(
                     modifier = Modifier.handleKeyEvents(onSelect = toUpdateScreen),
